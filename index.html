@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume for Amy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="application-root"></div>
+
+    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      function App(props) {
+        return (
+          <React.Fragment>
+            <header>{props.children}</header>
+            <main>
+              <section>
+                <h2>Experience</h2>
+                <ul>
+                  <li>
+                    <h2>Blogger</h2>
+                    <p>
+                      Fashion blogger incoporating national brands in advice on
+                      clothing design and marketing
+                    </p>
+                    <p>Date: 2018-present</p>
+                  </li>
+                  <li>
+                    <h2>Marketing</h2>
+                    <p>
+                      Digital Marketing expert optimizing businesses' presence
+                    </p>
+                    <p>Date: 2016-2018</p>
+                  </li>
+                  <li>
+                    <h2>Sales Executive</h2>
+                    <p>Pharmaceutical sales rep selling biomedical vaccines</p>
+                    <p>Date: 2014-2016</p>
+                  </li>
+                </ul>
+              </section>
+              <h2>Education</h2>
+              <ul>
+                <p>Harvard School of Psychology</p>
+                <p>Date: 2010-2014</p>
+              </ul>
+
+              <h2>Contact Info</h2>
+              <ul>
+                <li>
+                  <p>Phone: 555-555-5555</p>
+                  <span>Email: </span>
+                  <a href="mailto:amymeyers@gmail.com">AMY MEYERS</a>
+                  <address>
+                    <h3>Address: </h3>
+                    <p>5178 E Main St</p>
+                    <p>Los Angeles, CA 85032</p>
+                  </address>
+                </li>
+              </ul>
+            </main>
+          </React.Fragment>
+        );
+      }
+
+      ReactDOM.render(
+        <App>
+          <img
+            src="https://i.pinimg.com/564x/9e/83/ff/9e83ff2c28e062b0af3fca61bf4b989b.jpg"
+            alt=""
+          ></img>
+          <h1 id="intro">Resume of Amy Meyers</h1>
+        </App>,
+        document.querySelector("#application-root")
+      );
+    </script>
+  </body>
+</html>
